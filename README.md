@@ -1,4 +1,4 @@
-# NUTC 前端教學-Facebook 切版練習作業
+# NUTC 前端教學 - JavaScript ToDo List 練習作業
 
 ![](./assets/screenshot-todolist-1.png)
 
