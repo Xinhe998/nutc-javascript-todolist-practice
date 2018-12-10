@@ -1,0 +1,18 @@
+body{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    background-color:#DDDDDD;
+    font-family:Microsoft JhengHei;
+}
+#content{
+    text-align:center;
+    padding:20px 0px 0px 0px;
+}
+#title_div{
+    position:absolute;
+    width:100%;
+}
+#title_div > font{
+    font-size:50px;
+    color:#20B2AA;
+}
