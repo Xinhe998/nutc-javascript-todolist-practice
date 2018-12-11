@@ -2,7 +2,6 @@ window.onload = function() {
     var box_content = document.getElementsByClassName("keyboxVal")[0]; //取得inputbox
     var ul = document.getElementById("List_ul"); //取得ul
     box_content.focus();
-    var cal;
     box_content.addEventListener("keyup", function(e) { //按enter即新增待辦事項
         if (e.target.value != "" && e.keyCode === 13) {
             var li = document.createElement("li"); //創建一個li
