@@ -2,6 +2,7 @@ window.onload = function() {
     var box_content = document.getElementsByClassName("keyboxVal")[0]; //取得inputbox
     var ul = document.getElementById("List_ul"); //取得ul
     box_content.focus();
+    var cal;
     box_content.addEventListener("keyup", function(e) { //按enter即新增待辦事項
         if (e.target.value != "" && e.keyCode === 13) {
             var li = document.createElement("li"); //創建一個li
@@ -13,17 +14,30 @@ window.onload = function() {
             img.src = './assets/garbage.png';
             ul.appendChild(li); //在ul底下append li
             li.appendChild(checkbox); //再append li內容checkbox
-            li.appendChild(document.createTextNode(e.target.value)); //再append li內容text
             li.appendChild(img); //再append li內容 垃圾桶
+            li.appendChild(document.createTextNode(e.target.value)); //再append li內容text
+
             li.setAttribute("id", "element" + children_sum); //設定此次新增的li id
             // li.setAttribute("style", "overflow:hidden")
             checkbox.setAttribute("id", "check" + children_sum); //設定此次新增的li裡的checkbox id
             checkbox.setAttribute("style", "margin-left:2%;margin-right:5%;");
             checkbox.setAttribute("onclick", "textstyle_change(" + children_sum + ")"); //設定click執行之function
             img.setAttribute("id", "img" + children_sum); //設定此次新增的li裡的img id
+            img.setAttribute("style", "position:absolute;left:75%;top:var(--set_trashcan);z-index:1");
             img.setAttribute("onclick", "javascript:removeNode(" + children_sum + ")")
             e.target.value = "";
             box_content.value = e.target.value;
+
+            if (children_sum == 1) { //設定trash can 位置
+                cal = 25;
+                img.style.setProperty('--set_trashcan', cal + '%')
+            } else {
+                cal += 6.7
+                img.style.setProperty('--set_trashcan', cal + '%')
+                console.log(cal)
+            }
+
+
         }
     });
 

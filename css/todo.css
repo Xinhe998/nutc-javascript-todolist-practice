@@ -3,6 +3,11 @@
         padding: 0px;
     }
     
+     :root {
+        --set_trashcan: 25%;
+        /* 自定變數 */
+    }
+    
     body {
         background-color: #F5F5F5;
     }
@@ -50,7 +55,11 @@
     #List_ul>li {
         height: 35px;
         line-height: 35px;
+        /* max-width: 70%; */
+        word-break: break-all;
         border-bottom-style: solid;
         border-color: #F5F5F5;
         border-width: 1px;
+        overflow: hidden;
+        font-size: 16px;
     }
