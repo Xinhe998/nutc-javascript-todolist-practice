@@ -1,0 +1,56 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        background-color: #F5F5F5;
+    }
+    
+    .container {
+        margin: 0 auto;
+        width: 500px;
+    }
+    
+    .header {
+        margin: 0 auto;
+        margin-top: 1%
+    }
+    
+    .header>p {
+        font-family: "Microsoft JhengHei";
+        text-align: center;
+        font-size: 55px;
+        color: #5EC2AD;
+    }
+    
+    .keybox {
+        width: 100%;
+        margin: 2% auto 0 0;
+    }
+    
+    .keyboxVal {
+        width: 100%;
+        height: 35px;
+        border: 0;
+        outline: 0;
+        border-bottom-style: 1px solid #F5F5F5;
+    }
+    
+    .List {
+        margin: 1px auto;
+        width: 100%;
+        background-color: #5EC2AD;
+    }
+    
+    #List_ul {
+        list-style: none;
+    }
+    
+    #List_ul>li {
+        height: 35px;
+        line-height: 35px;
+        border-bottom-style: solid;
+        border-color: #F5F5F5;
+        border-width: 1px;
+    }
