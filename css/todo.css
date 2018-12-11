@@ -23,6 +23,7 @@ body{
 #todos_text_div{
     padding:0px 0px 0px 0px;
     height:50px;
+    border-bottom:1px solid #000000;
 }
 input[type=text]{
     border:0px solid #FFFFFF;
@@ -37,7 +38,14 @@ img{
 }
 .todos_item_data_div{
     padding-left:15px;
+    border-top:1px solid #000000;
 }
 .item_font{
     color:#444444;
+}
+table{
+    width:100%;
+}
+.td_image{
+    width:20px;
 }
