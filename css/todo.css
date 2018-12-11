@@ -2,11 +2,10 @@
         margin: 0px;
         padding: 0px;
     }
-    
-     :root {
-        --set_trashcan: 25%;
-        /* 自定變數 */
-    }
+    /* :root { */
+    /* --set_trashcan: 25%; */
+    /* 自定變數 */
+    /* } */
     
     body {
         background-color: #F5F5F5;

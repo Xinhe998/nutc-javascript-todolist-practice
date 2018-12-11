@@ -23,22 +23,11 @@ window.onload = function() {
             checkbox.setAttribute("style", "margin-left:2%;margin-right:5%;");
             checkbox.setAttribute("onclick", "textstyle_change(" + children_sum + ")"); //設定click執行之function
             img.setAttribute("id", "img" + children_sum); //設定此次新增的li裡的img id
-            img.setAttribute("style", "position:relative;left:75%;top:var(--set_trashcan);z-index:1");
+            img.setAttribute("style", "position:relative;left:75%;top:10%;z-index:1"); //設定trash can 位置
             img.setAttribute("onclick", "javascript:removeNode(" + children_sum + ")")
             e.target.value = "";
             box_content.value = e.target.value;
-
-            // if (children_sum == 1) { //設定trash can 位置
-            cal = 10;
-            img.style.setProperty('--set_trashcan', cal + '%')
-                // }
-                // } else {
-                //     // cal += 4
-                //     img.style.setProperty('--set_trashcan', cal + '%')
-                //     console.log(cal)
-                // }
-
-
+            // img.style.setProperty('--set_trashcan', cal + '%')
         }
     });
 
