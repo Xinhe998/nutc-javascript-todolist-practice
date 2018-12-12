@@ -3,6 +3,16 @@
     padding: 0px;
     font-family: Arial,Microsoft JhengHei;
 }
+::placeholder{
+    color: #FFF;
+    opacity: 0.8;
+}
+:-ms-input-placeholder { 
+    color: #FFF;
+}
+::-ms-input-placeholder{
+    color: #FFF;
+}
 body{
     font-size: 10rem;
     background-color: #DFFFFF;
@@ -33,9 +43,9 @@ body{
     height: 60px;
     padding: 0px 5%;
     font-size: 1.5rem;
-    color: #777;
+    color: #FFF;
     border: none;
-    background-color: #FFF;
+    background-color: #9BBBBB;
 }
 .content ul li{
     width: 90%;
@@ -52,10 +62,15 @@ body{
     padding: 5px;
     margin-right: 5px; 
 }
-.content span{
+.content button{
+    height: 40px;
+    margin: 5px 0px;
     color: #9BBBBB;
     font-size: 1.5rem;
+    line-height: 50px;
     right: 5%;
     position: absolute;
     cursor: pointer;
+    background-color: rgba(255,255,255,0);
+    border: none;
 }
