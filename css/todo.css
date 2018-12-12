@@ -6,9 +6,13 @@ div p{
     font-size: 72px;
     color: chartreuse;
 }
-textarea {
+input[type="text"] {
     width: 650px; 
     height: 20px;
     font-size: 15px;
-    resize: none;
+}
+ul li{
+    
+    margin-left: 350px;
+    text-align: left;
 }
