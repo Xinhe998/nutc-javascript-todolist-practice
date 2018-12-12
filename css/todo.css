@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+    
+}
+div p{
+    font-size: 72px;
+    color: chartreuse;
+}
+textarea {
+    width: 650px; 
+    height: 20px;
+    font-size: 15px;
+    resize: none;
+}
