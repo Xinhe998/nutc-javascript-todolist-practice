@@ -1,37 +1,48 @@
+//判斷鍵盤觸發enter事件
 document.onkeydown=function(event){
 var code = event.keyCode;
 if(document.getElementById("search").value!="")
     if (code==13)
     list();
 }
+//累計li的id
+var row=0;
 
 function list(){
-    //console.log(document.getElementById("search").value);
-    /*var node=document.createElement("li");
-    var value=document.getElementById("search").value;
-    var textnode=node.appendChild(document.createTextNode(value));
-    document.getElementById("list").appendChild(textnode);*/
-    var list=document.createElement("li");
+    var ls=document.createElement("li");
     var image=document.createElement("img");
     var image2=document.createElement("img");
     var value=document.getElementById("search").value;
     var textnode=document.createTextNode(value);
-    var allli=document.getElementsByTagName('li').length;
+
     image.src="assets/circle.png";
-    image2.src="assets/close.png";
-    list.appendChild(image);
-    list.appendChild(textnode);
-    image2.setAttribute("class","img2");
-    list.appendChild(image2);
-    list.setAttribute("id",allli);
+    image.setAttribute("name","0");
     image.setAttribute("onclick","javascript:imgclick(this);");
+    image2.src="assets/close.png";
+    image2.setAttribute("name","2");
+    image2.setAttribute("class","img2");
     image2.setAttribute("onclick","javascript:imgclick(this);");
-    document.getElementById("list").appendChild(list);
+
+    ls.appendChild(image);
+    ls.appendChild(textnode);
+    ls.appendChild(image2);
+    ls.setAttribute("id",row);
+
+    document.getElementById("list").appendChild(ls);
+    row++;
 }
-/*document.getElementById("list").addEventListener('click', function () {
-    console.log(this.getElementById);
-});*/
 function imgclick(obj){
-    console.log(obj);
-    obj.src="assets/check.png";
+    var f=obj.parentNode;
+    
+    if(obj.name==0){
+        obj.name=1;
+        obj.src="assets/check.png";
+        document.getElementById(f.id).style.textDecoration="line-through";
+    }else if(obj.name==1){
+        obj.name=0;
+        obj.src="assets/circle.png";
+        document.getElementById(f.id).style.textDecoration="none";
+    }else{
+        document.getElementById(f.id).remove(1);
+    }
 }
