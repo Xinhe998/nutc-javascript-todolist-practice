@@ -1,0 +1,8 @@
+.item{
+    width: 160px;
+    border: 1px solid;
+    border-top: 0px solid;
+}
+.standard{
+    display: inline-block;
+}
