@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial,Microsoft JhengHei;
+}
+body{
+    font-size: 10rem;
+    background-color: #DFFFFF;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.title{
+    width: 50%;
+    margin: 10% auto 20px auto;
+    font-size: 3rem;
+    color: #9BBBBB;
+    letter-spacing: 10px;
+    text-align: center;
+}
+.content{
+    width: 50%;
+    margin: 0px 25%;
+    position: relative;
+    font-size: 1.2rem;
+    float: left;
+    box-shadow: 3px 3px 10px #9BBBBB;
+}
+.content input[type="text"]{
+    width: 90%;
+    height: 60px;
+    padding: 0px 5%;
+    font-size: 1.5rem;
+    color: #777;
+    border: none;
+    background-color: #FFF;
+}
+.content ul li{
+    width: 90%;
+    height: 50px;
+    padding: 0px 5%;
+    background-color: #FFF;
+    list-style: none;
+    line-height: 50px;
+    color: #777;
+}
+.content input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    margin-right: 5px; 
+}
+.content span{
+    color: #9BBBBB;
+    font-size: 1.5rem;
+    right: 5%;
+    position: absolute;
+    cursor: pointer;
+}
