@@ -30,6 +30,7 @@ function list(){
 
     document.getElementById("list").appendChild(ls);
     row++;
+    document.getElementById("search").value="";
 }
 function imgclick(obj){
     var f=obj.parentNode;
