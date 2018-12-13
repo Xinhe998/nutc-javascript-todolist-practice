@@ -12,9 +12,16 @@
         todos
     </div>
     <div class="list">
-        <ul>
-            <li><input type="text"></li>
+        <ul id="menu">
+            <li><input type="text" placeholder="待辦事項" id="input_box"></li>
         </ul>
     </div>
+    <script>
+        document.getElementById('input_box').onkeydown=function(e) {
+            if(e.keyCode==13){
+                document.getElementById('menu').appendChild()
+            }
+        }
+    </script>
 </body>
 </html>
