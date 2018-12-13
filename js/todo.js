@@ -34,5 +34,6 @@ document.getElementById("text").addEventListener('keypress', function () {
         //li.appendChild(span);
         
         document.getElementById("table").border = "1px solid #000000";
+        this.value="";
     }
 });
