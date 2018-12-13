@@ -4,16 +4,19 @@
     border: 1px solid;
     border-top: 0px solid;
 }
+
+h1{
+    margin: 15px auto;
+    text-align: center;
+}
 #top{
     width: 373px;
     margin: 0px auto;
 }
-#top h1{
-    text-align: center;
-}
 #thing{
+    
     font-size: 30px;
-    margin: 0px auto;
+
 }
 #content{
     width: 373px;
