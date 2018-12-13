@@ -10,7 +10,7 @@ function event_remove(){
     this.parentElement.parentElement.removeChild(remo);
 }
 document.querySelector("input[type=text]").addEventListener("keypress",function(){
-   if(event.keyCode==13){
+   if(event.keyCode==13 && this.value!=""){
         var list=document.createElement("li");
         var checkbox=document.createElement("input");
         checkbox.type="checkbox";
