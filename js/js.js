@@ -23,6 +23,8 @@ input.addEventListener("keyup", function (event) {
     div.appendChild(thing);
     div.appendChild(clean);
     content.appendChild(div);
+
+    input.value = "";
     for (let i = 0; i < x.length; i++) {
       x[i].children[0].addEventListener('click', function () {
         if (this.checked) {
