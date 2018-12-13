@@ -23,3 +23,11 @@ input[type=text] {
     border: none;
     background-color:white;
 }
+#dolist{
+    margin: 0;
+    padding: 0;
+}
+#dolist li{
+    list-style: none;
+    padding: 0.5em 0.5em 0 0.5em;
+}
