@@ -39,6 +39,7 @@ body{
     box-shadow: 3px 3px 10px #9BBBBB;
 }
 .content input[type="text"]{
+    outline: 0;                                         /*清除focus外框*/
     width: 90%;
     height: 60px;
     padding: 0px 5%;
@@ -56,11 +57,14 @@ body{
     line-height: 50px;
     color: #777;
 }
-.content input[type="checkbox"]{
+.content input[type="checkbox"]{                        /*checkbox樣式可透過換background-image*/
     width: 15px;
     height: 15px;
     padding: 5px;
     margin-right: 5px; 
+}
+.content input[type="checkbox"]:checked + text{         /*法2,(法1在js)*/
+    text-decoration: line-through;
 }
 .content button{
     height: 40px;

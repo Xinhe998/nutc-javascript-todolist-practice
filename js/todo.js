@@ -1,4 +1,5 @@
 window.onload = function(){
+    document.getElementById("enter").focus();                   //一進到網頁游標自動focus在輸入框
     var n=1;                                                    //li的id
     document.getElementById("enter").onkeydown = function addEvent(){
         if(event.keyCode == 13){                                //13是Enter鍵
@@ -8,7 +9,7 @@ window.onload = function(){
             var node = document.createElement("li");            //新增li
             var checkbox = document.createElement("input");     //新增input
             var list = document.createElement("text");          //新增text
-            var deletenode = document.createElement("button");    //新增button->X
+            var deletenode = document.createElement("button");  //新增button->X
             checkbox.type = "checkbox";                         //set input type為checkbox
             list.innerHTML = content_text;                      //將字塞進text裡
             deletenode.innerHTML = "X";                         //X
@@ -27,17 +28,17 @@ window.onload = function(){
         }
     }; 
 };
-function done(n){
+/*function done(n){                                             //法1,(法2在css)
     var ischecked = document.getElementById("check"+n);         //取得checkbox
     var change = document.getElementById("list"+n);             //取得list內容
-    if(ischecked.checked==true){
+    if(ischecked.checked == true){
         change.setAttribute("style","text-decoration:line-through;");   
         console.log(n+"true");
     }else{
         change.setAttribute("style","text-decoration:none;");   
         console.log(n+"false");
     }
-};    
+}; */   
 function deletelist(n){
     var x = document.getElementById(n);
     x.parentNode.removeChild(x);
