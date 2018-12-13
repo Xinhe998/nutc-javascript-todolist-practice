@@ -13,13 +13,19 @@
     </div>
     <div class="list">
         <ul id="menu">
-            <li><input type="text" placeholder="待辦事項" id="input_box"></li>
+            <li>
+                <input type="text" placeholder="待辦事項" id="input_box">
+            </li>
         </ul>
     </div>
     <script>
         document.getElementById('input_box').onkeydown=function(e) {
             if(e.keyCode==13){
-                document.getElementById('menu').appendChild()
+                var node=document.createElement('li');
+                var text=document.createTextNode(document.getElementById('input_box').value);
+                node.appendChild(text);
+                document.getElementById('menu').appendChild(node);
+                document.getElementById('input_box').value="";
             }
         }
     </script>
