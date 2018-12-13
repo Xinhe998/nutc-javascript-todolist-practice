@@ -1,0 +1,58 @@
+.contanier{
+    background: rgb(2, 127, 168);
+    width: 50%;
+    display: inline-block;
+    margin-left: 400px;
+}
+#text-h1{
+    color: aquamarine;
+    text-align: center;
+}
+#inputtext{
+    text-align: center;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul li:nth-child(odd){
+    background: #f9f9f9;
+}
+ul li:hover{
+    background: rgb(228, 207, 117);
+}
+ul li.checked{
+    background: rgb(30, 104, 109);
+    color: #fff;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
