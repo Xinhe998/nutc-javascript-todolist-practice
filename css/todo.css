@@ -1,0 +1,40 @@
+div {
+    text-align: center;
+    
+}
+div p{
+    font-size: 72px;
+    color: chartreuse;
+}
+input[type="text"] {
+    width: 650px; 
+    height: 20px;
+    font-size: 15px;
+}
+/*ul{
+    padding: 0px;
+}
+li{
+    list-style-type: none;
+    text-align: left;
+    position: relative;
+}*/
+table{
+    border-collapse: collapse;
+    margin-top: -1px;
+    width: 650px;
+}
+td{
+    text-align: left;
+    position: relative;
+}
+span{
+    position: absolute;
+    right: 0px;
+}
+span:before{
+    content: "\2716";
+}
+.tdclass  {
+    text-decoration:line-through;
+}
