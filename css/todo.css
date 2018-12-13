@@ -2,7 +2,7 @@ body{
     background-color: #F5F5F5;
 }
 .content{
-  width: 50vw;
+  width: 40vw;
   margin:0 auto;
 }
 .header{
@@ -17,17 +17,36 @@ body{
     width: 20vw;
 }
 input[type=text] {
-    width: 46.5vw;
+    outline: none; /*取消focus時的外框*/
+    width: 36.5vw;
     padding: 12px 20px;
     margin:0 auto;
     border: none;
     background-color:white;
 }
+label{
+    padding-left: 1em;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=checkbox]:checked+label{
+    text-decoration: line-through;
+}
 #dolist{
+    width: 10vw;
     margin: 0;
     padding: 0;
 }
 #dolist li{
-    list-style: none;
-    padding: 0.5em 0.5em 0 0.5em;
+    position: relative;
+    width: 38vw;
+    list-style: none; 
+    padding: 0.5em 0.5em 0.5em 0.1em;
+    border-bottom: 1px solid #5EC2AD ;
+    margin-bottom: 1em;
+}
+.deleteBtn{
+    position: absolute;
+    left: 97%;
+    border-radius: 50px;
 }
