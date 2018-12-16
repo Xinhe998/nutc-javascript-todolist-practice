@@ -18,7 +18,7 @@ input.addEventListener("keyup", function (event) {
     var clean_word = document.createTextNode("刪除");
     clean.className = "clean standard";
     clean.appendChild(clean_word);
-    
+
     div.appendChild(checkbox);
     div.appendChild(thing);
     div.appendChild(clean);
@@ -26,18 +26,22 @@ input.addEventListener("keyup", function (event) {
 
     input.value = "";
     for (let i = 0; i < x.length; i++) {
-      x[i].children[0].addEventListener('click', function () {
-        if (this.checked) {
-          x[i].children[1].style.textDecoration = "line-through";
-        }else{
-          x[i].children[1].style.textDecoration = "none";
-        }
-      });
+      if (x[i].children[0] != null) {
+        x[i].children[0].addEventListener('click', function () {
+          if (this.checked) {
+            x[i].children[1].style.textDecoration = "line-through";
+          } else {
+            x[i].children[1].style.textDecoration = "none";
+          }
+        });
+      }
 
-      x[i].children[2].addEventListener('click',function(){
-        x[i].innerHTML = "";
-        x[i].style.border = "none";
-      });
+      if (x[i].children[2] != null) {
+        x[i].children[2].addEventListener('click', function () {
+          x[i].innerHTML = "";
+          x[i].style.border = "none";
+        });
+      }
     }
   }
 });
