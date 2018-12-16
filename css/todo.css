@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;   
+    font-family: sans-serif;
+}
+input[type=checkbox]:checked+label{
+    text-decoration: line-through;
+}
+h1{   
+    font-size: 50px;
+}
+#content{
+    width: 400px;
+    height: 30px;
+    
+}
+.container{
+    width: 100%;
+    height: 900px;
+    margin: 0px auto;
+    padding-top: 5%;
+    text-align: center;
+    background-image: url(../assets/bg.jpg);
+    background-repeat: no-repeat;
+}
+ul{
+    width: 400px;
+    height: 900px;
+}
+li{
+    margin-top: 3%;
+}
+li > button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 32%;
+}
+li > input{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 32%;
+}
+li > label{
+    width: 300px;
+    height: 20px;
+    position: absolute;
+    left: 35%;
+    word-break: break-all;
+    text-align: left;
+    font-weight:bold;
+    font-size: 20px;
+}
