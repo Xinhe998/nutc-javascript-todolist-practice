@@ -1,0 +1,47 @@
+body{
+    background: wheat;
+}
+.head{
+    text-align: center;
+    font-size: 80px;
+    font-family: sans-serif;
+    color:green;
+}
+.list{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+.list ul{
+    display: inline-block;
+    width: 800px;
+    padding: 0;
+    list-style-type: none;
+}
+#input_box{
+    text-align: left; 
+    width: 90%;
+    height: 30px;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    padding-left: 10%;
+}
+.list li{
+    width: 100%;
+    height: 30px;
+    border: 1px solid aquamarine;
+    border-radius: 5px;
+    background: rgb(203, 233, 183);
+    text-align: left;
+}
+.check:checked+.checked-label{
+    text-decoration: line-through;
+}
+.del{
+    float: right;
+    background: red;
+    width: 10px;
+    height: 10px;
+}
