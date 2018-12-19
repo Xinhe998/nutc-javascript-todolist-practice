@@ -1,0 +1,44 @@
+body{
+    font-family: Microsoft JhengHei;
+    background-color: rgb(238, 238, 238);
+}
+#title{
+    text-align: center;
+    color: rgb(0, 185, 130);
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.box{
+    /* position: relative; */
+    width: 500px;
+    margin: 20px auto 0 auto;
+}
+#textbox{
+    width: 500px;
+    height: 35px;
+    font-size: 24px;
+    font-family: Microsoft JhengHei;
+    border: none;
+    line-height: 35px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 50px;
+    box-shadow: 8px 5px 1rem #c2c2c2;
+}
+
+li{
+    list-style: none;
+    width: 548px;
+    height: 40px;
+    font-size: 24px;
+    /* box-shadow: 0 0 1rem #c2c2c2; */
+    background-color: rgb(202, 202, 255);
+    margin-top: 2px;
+    margin-left: -38px;
+    line-height: 35px;
+}
+
+input[type=checkbox]{
+    width: 30px;
+}
