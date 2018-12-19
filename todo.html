@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/todo.css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="head">
         todos
@@ -19,15 +23,35 @@
         </ul>
     </div>
     <script>
-        document.getElementById('input_box').onkeydown=function(e) {
-            if(e.keyCode==13){
-                var node=document.createElement('li');
-                var text=document.createTextNode(document.getElementById('input_box').value);
+        document.getElementById('input_box').onkeydown = function (e) {
+            if (e.keyCode == 13) {
+                var node = document.createElement('li');
+                node.className = "content";
+                var check = document.createElement('input');
+                check.type = "checkbox";
+                check.className = "check";
+                check.id = document.getElementById('input_box').value;
+                var labe = document.createElement('label');
+                labe.htmlFor = document.getElementById('input_box').value;
+                labe.className = "checked-label";
+                var text = document.createTextNode(document.getElementById('input_box').value);
+                var del = document.createElement('button');
+                del.type = "button";
+                del.className = "del";
                 node.appendChild(text);
+                node.appendChild(check);
+                node.appendChild(labe);
+                node.appendChild(del);
+                labe.appendChild(text);
                 document.getElementById('menu').appendChild(node);
-                document.getElementById('input_box').value="";
+                document.getElementById('input_box').value = "";
+
+                $("ul").on("click", "button", function (e) {
+                    $(this).parent().remove();
+                });
             }
         }
     </script>
 </body>
+
 </html>

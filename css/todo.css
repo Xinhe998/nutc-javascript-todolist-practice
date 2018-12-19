@@ -20,7 +20,7 @@ body{
     padding: 0;
     list-style-type: none;
 }
-input{
+#input_box{
     text-align: left; 
     width: 90%;
     height: 30px;
@@ -35,4 +35,13 @@ input{
     border-radius: 5px;
     background: rgb(203, 233, 183);
     text-align: left;
+}
+.check:checked+.checked-label{
+    text-decoration: line-through;
+}
+.del{
+    float: right;
+    background: red;
+    width: 10px;
+    height: 10px;
 }
