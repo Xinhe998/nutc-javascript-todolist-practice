@@ -29,11 +29,22 @@
 }
 
 .todo {
-  width: 50%;
   border-radius: 5px;
   @extend %shadow;
   @extend %m-15;
   @include flex(column, center);
+  @include pc-width{
+    width: 55%;
+  }
+  @include pad-width{
+    width: 65%;
+  }
+  @include small-pad-width{
+    width: 75%;
+  }
+  @include phone-width{
+    width: 100%;
+  }
 }
 
 .todo__form {
@@ -53,7 +64,7 @@
 
 .form__input {
   width: 80%;
-  padding: $space-size 54px;
+  padding: $space-size 45px;
   color: $font-light-color;
   border-radius: 50px;
   margin-top: $space-size;

@@ -25,3 +25,24 @@
   font-size: $size;
   line-height: $height;
 }
+
+@mixin pc-width() {
+  @media screen and (min-width: $pc-media) {
+    @content;
+  }
+}
+@mixin pad-width() {
+  @media screen and (min-width: $pad-media) and (max-width: $pcs-media) {
+    @content;
+  }
+}
+@mixin small-pad-width() {
+  @media screen and (min-width: $phone-media) and (max-width: $pads-media) {
+    @content;
+  }
+}
+@mixin phone-width() {
+  @media screen and (max-width: $phones-media) {
+    @content;
+  }
+}

@@ -63,7 +63,6 @@ a {
 }
 
 .todo {
-  width: 50%;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +77,30 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media screen and (min-width: 1024px) {
+  .todo {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .todo {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 512px) and (max-width: 767px) {
+  .todo {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 511px) {
+  .todo {
+    width: 100%;
+  }
 }
 
 .todo__form {
@@ -109,7 +132,7 @@ a {
 
 .form__input {
   width: 80%;
-  padding: 15px 54px;
+  padding: 15px 45px;
   color: #262626;
   border-radius: 50px;
   margin-top: 15px;
