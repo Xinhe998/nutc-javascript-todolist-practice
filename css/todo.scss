@@ -93,6 +93,7 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-left: 20px solid $primary-color;
+  word-break: break-all;
   @extend %bg-white;
   @extend %shadow;
   @extend %p-15;

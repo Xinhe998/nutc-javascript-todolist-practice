@@ -10,11 +10,13 @@ function add_todo() {
         var button = document.createElement("button");
         var box_block = document.createElement("div")
         var button_block = document.createElement("div");
-        box_block.append(checkbox,label,todo);
+        var text = document.createElement("span");
+        text.append(todo);
+        box_block.append(checkbox,label,text);
         box_block.setAttribute("class","list__left")
         checkbox.setAttribute("type", "checkbox");
         checkbox.setAttribute("class","list__box");
-        checkbox.setAttribute("onchange","check_todo()");
+        //checkbox.setAttribute("onchange","check_todo()");
         label.setAttribute("class","box__pic");
         button.setAttribute("class","list__delete");
         button.setAttribute("onclick","delete_todo(this)");
@@ -31,17 +33,6 @@ function add_todo() {
     }
     else{
         return;
-    }
-};
-function check_todo(){
-    for(var i=0;i<all_list.length;i++){
-        var box = document.getElementsByClassName("list__box")[i];
-        if(box.checked == true){
-            document.getElementsByClassName("list__item")[i].setAttribute("class","list__item line-through");
-        }
-        else{
-            document.getElementsByClassName("list__item")[i].setAttribute("class","list__item");
-        }
     }
 };
 function delete_todo(btn){

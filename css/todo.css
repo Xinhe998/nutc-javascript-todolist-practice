@@ -181,6 +181,7 @@ a {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-left: 20px solid #4285f4;
+  word-break: break-all;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +244,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.line-through {
+.list__box:checked ~ span {
   text-decoration: line-through;
 }
 
