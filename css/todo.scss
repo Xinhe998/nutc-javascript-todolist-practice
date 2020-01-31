@@ -31,7 +31,7 @@
 .todo {
   width: 50%;
   border-radius: 5px;
-  box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
+  @extend %shadow;
   @extend %m-15;
   @include flex(column, center);
 }
