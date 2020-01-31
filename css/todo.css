@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  width: 90%;
+}
+
 .form__input, .list__delete {
   border: 0;
 }
@@ -200,6 +204,7 @@ a {
 }
 
 .list__left {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -102,6 +102,7 @@
 }
 
 .list__left {
+  width: 95%;
   @include flex(row, center);
 }
 
@@ -125,7 +126,7 @@
   background-repeat: no-repeat;
 }
 
-.line-through {
+.list__box:checked ~ span {
   text-decoration: line-through;
 }
 
