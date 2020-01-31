@@ -16,7 +16,6 @@ function add_todo() {
         box_block.setAttribute("class","list__left")
         checkbox.setAttribute("type", "checkbox");
         checkbox.setAttribute("class","list__box");
-        //checkbox.setAttribute("onchange","check_todo()");
         label.setAttribute("class","box__pic");
         button.setAttribute("class","list__delete");
         button.setAttribute("onclick","delete_todo(this)");
