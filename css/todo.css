@@ -19,7 +19,8 @@ a {
 }
 
 span {
-  width: 90%;
+  width: 95%;
+  padding: 15px;
 }
 
 .form__input, .list__delete {
@@ -95,15 +96,15 @@ span {
   }
 }
 
-@media screen and (min-width: 512px) and (max-width: 767px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
   .todo {
     width: 75%;
   }
 }
 
-@media screen and (max-width: 511px) {
+@media screen and (max-width: 359px) {
   .todo {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -204,7 +205,6 @@ span {
 }
 
 .list__left {
-  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,9 +215,9 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .list__right {
@@ -236,10 +236,17 @@ span {
           justify-content: flex-start;
 }
 
+.list__text {
+  width: 95%;
+  padding: 15px;
+}
+
 .box__pic {
+  width: 5%;
+  padding: 15px;
   background-image: url("../images/circle.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  margin-right: 15px;
   width: 24px;
   height: 24px;
 }

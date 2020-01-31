@@ -8,16 +8,16 @@
 %display-none {
   display: none;
 }
-%p-15{
+%p-15 {
   padding: $space-size;
 }
-%m-15{
+%m-15 {
   margin: $space-size;
 }
-%shadow{
+%shadow {
   box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
 }
-%bg-white{
+%bg-white {
   background-color: #fff;
 }
 
@@ -33,17 +33,17 @@
   @extend %shadow;
   @extend %m-15;
   @include flex(column, center);
-  @include pc-width{
+  @include pc-width {
     width: 55%;
   }
-  @include pad-width{
+  @include pad-width {
     width: 65%;
   }
-  @include small-pad-width{
+  @include small-pad-width {
     width: 75%;
   }
-  @include phone-width{
-    width: 80%;
+  @include phone-width {
+    width: 90%;
   }
 }
 
@@ -102,22 +102,27 @@
 }
 
 .list__left {
-  width: 95%;
-  @include flex(row, center);
+  @include flex(row, center, space-evenly);
 }
 
 .list__right {
   @include flex(row, center);
 }
 
+.list__text {
+  width: 95%;
+  padding: 15px;
+}
 .list__box {
   @extend %display-none;
 }
 
 .box__pic {
+  width: 5%;
+  padding: 15px;
   background-image: url($pic_unchecked);
+  background-size: cover;
   background-repeat: no-repeat;
-  margin-right: $space-size;
   @include icon-size(24px, 24px);
 }
 

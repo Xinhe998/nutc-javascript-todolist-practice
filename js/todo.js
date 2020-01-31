@@ -14,6 +14,7 @@ function add_todo() {
         var text = document.createElement("span");
         var all_list = list.children;
         text.append(todo);
+        text.setAttribute("class","list__text");
         box_block.append(checkbox,label,text);
         box_block.setAttribute("class","list__left")
         checkbox.setAttribute("type", "checkbox");
