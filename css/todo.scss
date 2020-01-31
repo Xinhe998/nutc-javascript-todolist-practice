@@ -5,77 +5,88 @@
 %border-none {
   border: 0;
 }
-
 %display-none {
   display: none;
 }
+%p-15{
+  padding: $space-size;
+}
+%m-15{
+  margin: $space-size;
+}
+%shadow{
+  box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
+}
+%bg-white{
+  background-color: #fff;
+}
 
 .wrapper {
-  @include flex(row, flex-start, center);
   width: 100vw;
   height: 100vh;
-  min-width: 1024px;
   background-color: $bg-color;
+  @include flex(row, flex-start, center);
 }
 
 .todo {
   width: 50%;
   border-radius: 5px;
-  @include flex(column, center);
   box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
-  margin: $space-size;
+  @extend %m-15;
+  @include flex(column, center);
 }
 
 .todo__form {
   width: 100%;
-  background-image: url("https://i.pinimg.com/originals/b7/4e/ec/b74eec06983f750ad19d2cf8437b542a.png");
+  background-image: url($form-bg);
   background-size: cover;
-  padding: $space-size;
+  @extend %p-15;
   @include flex(column, center);
 }
 
 .form__title {
   color: $primary-color;
-  @include font($title-size, none);
   width: 100%;
   text-align: center;
+  @include font($title-size, none);
 }
 
 .form__input {
   width: 80%;
-  @include font($font-size);
   padding: $space-size 54px;
   color: $font-light-color;
-  @extend %border-none;
   border-radius: 50px;
-  box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
-  margin-top: 15px;
+  margin-top: $space-size;
+  @extend %border-none;
+  @extend %shadow;
+  @include font($font-size);
 }
 
 .todo__content {
   width: 100%;
+  @extend %p-15;
+  @extend %bg-white;
   @include flex(column, center);
-  background-color: #fff;
-  padding: $space-size;
 }
 
 .todo__list {
   width: 100%;
+  @extend %bg-white;
   @include flex(column, center);
 }
 
 .list__item {
-  width: 95%;
+  width: 90%;
   color: $font-light-color;
-  @include flex(row, center, space-between);
-  @include font($font-size);
-  padding: $space-size;
-  margin: $space-size 0;
+  margin: 15px auto;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-left: 20px solid $primary-color;
-  background-color: #fff;
-  box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
+  @extend %bg-white;
+  @extend %shadow;
+  @extend %p-15;
+  @include flex(row, center, space-between);
+  @include font($font-size);
 }
 
 .list__left {
@@ -91,10 +102,10 @@
 }
 
 .box__pic {
-  @include icon-size(24px, 24px);
   background-image: url($pic_unchecked);
   background-repeat: no-repeat;
-  margin-right: 15px;
+  margin-right: $space-size;
+  @include icon-size(24px, 24px);
 }
 
 .list__box:checked + .box__pic {
@@ -107,10 +118,10 @@
 }
 
 .list__delete {
-  @include icon-size(24px, 24px);
-  @extend %border-none;
   background-image: url($pic_delete);
-  background-color: transparent;
+  @extend %bg-white;
+  @extend %border-none;
+  @include icon-size(24px, 24px);
 }
 
 .form__target {

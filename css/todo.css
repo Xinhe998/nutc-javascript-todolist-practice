@@ -18,11 +18,7 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .form__input, .list__delete {
-=======
-.todo__input, .list__delete {
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
   border: 0;
 }
 
@@ -30,7 +26,27 @@ a {
   display: none;
 }
 
+.todo__form, .todo__content, .list__item {
+  padding: 15px;
+}
+
+.todo {
+  margin: 15px;
+}
+
+.form__input, .list__item {
+  -webkit-box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.todo__content, .todo__list, .list__item, .list__delete {
+  background-color: #fff;
+}
+
 .wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,22 +60,13 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
-  height: 100vh;
-<<<<<<< HEAD
-  min-width: 1024px;
-=======
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
-  background-color: #f6f6f6;
 }
 
 .todo {
-<<<<<<< HEAD
   width: 50%;
-=======
-  width: 35%;
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
   border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,28 +80,12 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
-  margin: 15px;
 }
 
-<<<<<<< HEAD
 .todo__form {
-=======
-.todo__title {
-  color: #4285f4;
-  font-size: 72px;
-  line-height: none;
-  width: 100%;
-  text-align: center;
-}
-
-form {
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
   width: 100%;
   background-image: url("https://i.pinimg.com/originals/b7/4e/ec/b74eec06983f750ad19d2cf8437b542a.png");
   background-size: cover;
-  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,45 +101,22 @@ form {
           justify-content: flex-start;
 }
 
-<<<<<<< HEAD
 .form__title {
   color: #4285f4;
-  font-size: 72px;
-  line-height: none;
   width: 100%;
   text-align: center;
+  font-size: 72px;
+  line-height: none;
 }
 
 .form__input {
-=======
-.todo__list {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.todo__input {
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
   width: 80%;
-  font-size: 24px;
-  line-height: 24px;
   padding: 15px 54px;
   color: #262626;
   border-radius: 50px;
-  -webkit-box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
   margin-top: 15px;
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .todo__content {
@@ -166,11 +134,8 @@ form {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: #fff;
-  padding: 15px;
 }
 
-<<<<<<< HEAD
 .todo__list {
   width: 100%;
   display: -webkit-box;
@@ -188,11 +153,13 @@ form {
           justify-content: flex-start;
 }
 
-=======
->>>>>>> 94ba7d6... 編譯SCSS取得CSS與CSS.MAP
 .list__item {
-  width: 95%;
+  width: 90%;
   color: #262626;
+  margin: 15px auto;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: 20px solid #4285f4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,14 +175,6 @@ form {
           justify-content: space-between;
   font-size: 24px;
   line-height: 24px;
-  padding: 15px;
-  margin: 15px 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-left: 20px solid #4285f4;
-  background-color: #fff;
-  -webkit-box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.3);
 }
 
 .list__left {
@@ -251,11 +210,11 @@ form {
 }
 
 .box__pic {
-  width: 24px;
-  height: 24px;
   background-image: url("../images/circle.png");
   background-repeat: no-repeat;
   margin-right: 15px;
+  width: 24px;
+  height: 24px;
 }
 
 .list__box:checked + .box__pic {
@@ -268,9 +227,8 @@ form {
 }
 
 .list__delete {
+  background-image: url("../images/rubbish.png");
   width: 24px;
   height: 24px;
-  background-image: url("../images/rubbish.png");
-  background-color: transparent;
 }
 /*# sourceMappingURL=todo.css.map */
