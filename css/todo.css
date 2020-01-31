@@ -18,11 +18,6 @@ a {
   text-decoration: none;
 }
 
-span {
-  width: 95%;
-  padding: 15px;
-}
-
 .form__input, .list__delete {
   border: 0;
 }
