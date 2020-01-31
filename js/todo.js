@@ -27,7 +27,6 @@ function add_todo() {
         for(var i=0;i<all_list.length;i++){
             checkbox.setAttribute("id","box"+i);
             label.setAttribute("for","box"+i);
-            button.setAttribute("id","button"+i);
         }
     }
     else{
