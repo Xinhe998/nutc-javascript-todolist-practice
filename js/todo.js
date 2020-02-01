@@ -45,6 +45,5 @@ function delete_todo(btn){
 };
 function del_count(){
     d+=1;
-    console.log(d);
     return d;
 }
