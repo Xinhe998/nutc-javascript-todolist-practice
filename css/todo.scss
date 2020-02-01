@@ -1,0 +1,147 @@
+@import "variable";
+@import "base";
+@import "mixin";
+
+%border-none {
+  border: 0;
+}
+%display-none {
+  display: none;
+}
+%p-15 {
+  padding: $space-size;
+}
+%m-15 {
+  margin: $space-size;
+}
+%shadow {
+  box-shadow: 2px 2px 12px -2px rgba($color: #000000, $alpha: 0.3);
+}
+%bg-white {
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-color;
+  @include flex(row, flex-start, center);
+}
+
+.todo {
+  border-radius: 5px;
+  @extend %shadow;
+  @extend %m-15;
+  @include flex(column, center);
+  @include pc-width {
+    width: 55%;
+  }
+  @include pad-width {
+    width: 65%;
+  }
+  @include small-pad-width {
+    width: 75%;
+  }
+  @include phone-width {
+    width: 90%;
+  }
+}
+
+.todo__form {
+  width: 100%;
+  background-image: url($form-bg);
+  background-size: cover;
+  @extend %p-15;
+  @include flex(column, center);
+}
+
+.form__title {
+  color: $primary-color;
+  width: 100%;
+  text-align: center;
+  @include font($title-size, none);
+}
+
+.form__input {
+  width: 80%;
+  padding: $space-size 45px;
+  color: $font-light-color;
+  border-radius: 50px;
+  margin-top: $space-size;
+  @extend %border-none;
+  @extend %shadow;
+  @include font($font-size);
+}
+
+.todo__content {
+  width: 100%;
+  @extend %p-15;
+  @extend %bg-white;
+  @include flex(column, center);
+}
+
+.todo__list {
+  width: 100%;
+  @extend %bg-white;
+  @include flex(column, center);
+}
+
+.list__item {
+  width: 90%;
+  color: $font-light-color;
+  margin: 15px auto;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: 20px solid $primary-color;
+  word-break: break-all;
+  @extend %bg-white;
+  @extend %shadow;
+  @extend %p-15;
+  @include flex(row, center, space-between);
+  @include font($font-size);
+}
+
+.list__left {
+  @include flex(row, center, space-evenly);
+}
+
+.list__right {
+  @include flex(row, center);
+}
+
+.list__text {
+  width: 95%;
+  padding: 15px;
+}
+.list__box {
+  @extend %display-none;
+}
+
+.box__pic {
+  width: 5%;
+  padding: 15px;
+  background-image: url($pic_unchecked);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include icon-size(24px, 24px);
+}
+
+.list__box:checked + .box__pic {
+  background-image: url($pic_checked);
+  background-repeat: no-repeat;
+}
+
+.list__box:checked ~ span {
+  text-decoration: line-through;
+}
+
+.list__delete {
+  background-image: url($pic_delete);
+  @extend %bg-white;
+  @extend %border-none;
+  @include icon-size(24px, 24px);
+}
+
+.form__target {
+  @extend %display-none;
+}
