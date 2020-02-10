@@ -10,17 +10,17 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background-color: #ffe;
+    background-color: #fffff0;
 }
 
-.todos{
+.todo{
     width: 1000px;
     position: absolute;
     left: 50%;
     margin-left: -500px;
 }
 
-.title{
+.todo__title{
     text-align: center;
     color: #3E8BFF;
     font-size: 100px;
@@ -28,47 +28,53 @@
     margin-top: 2%;
 }
 
-input:first-of-type{
+.todo__input{
     border: #eee solid 1px;
     border-radius: 50px;
     width: 1000px;
     padding: 2.5% 5%;
     color: #ccc;
 }
-input:first-of-type::placeholder{
+.todo__input::placeholder{
     color: #ccc;
     font-size: 25px;
 }
-input:first-of-type:focus{
+.todo__input:focus{
     outline: none;
 }
 
-input:last-of-type{
-    display: none;
-} 
-
-label {
-    width: 1000px;
-    height: 100px;
-    margin-top: 2%;
-    display: flex;
-    background-image: url(check.svg);
-    background-repeat: no-repeat;
-}
-
-input:checked + label {
+.todo__input:checked + label {
     display: flex;
     background-image: url(check1.svg);
     background-repeat: no-repeat;
   }
 
-input:checked +label>span {
+.todo__input:checked +label>span {
     text-decoration: line-through;
 }
 
-span{
+.listto li{
+    cursor: pointer;
+    background-image: url(check.svg);
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 100px;
+    margin-top: 2%;
     display: flex;
     padding: .5% 5%;
     font-size: 20px;
     color: #888;
+}
+.listto li.checked{
+    cursor: pointer;
+    background-image: url(check1.svg);
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 100px;
+    margin-top: 2%;
+    display: flex;
+    padding: .5% 5%;
+    font-size: 20px;
+    color: #888;
+    text-decoration: line-through;
 }
