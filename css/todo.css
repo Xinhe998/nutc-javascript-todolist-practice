@@ -10,7 +10,7 @@
 .wrapper{
     width: 100vw;
     height: 100vh;
-    background-color: #fffff0;
+    background-color: #ffe;
 }
 
 .todo{
@@ -27,13 +27,11 @@
     margin-bottom: 5%;
     margin-top: 2%;
 }
-
 .todo__input{
     border: #eee solid 1px;
     border-radius: 50px;
     width: 1000px;
     padding: 2.5% 5%;
-    color: #ccc;
 }
 .todo__input::placeholder{
     color: #ccc;
@@ -42,39 +40,40 @@
 .todo__input:focus{
     outline: none;
 }
-
-.todo__input:checked + label {
-    display: flex;
-    background-image: url(check1.svg);
-    background-repeat: no-repeat;
-  }
-
-.todo__input:checked +label>span {
-    text-decoration: line-through;
+.todo__list{
+    list-style: none;
+    line-height: 3;
 }
-
-.listto li{
+.todo__list li{
+    margin-top:1%;
+}
+.todo__list li input{
+    display: none;
+}
+.todo__list li input + label{
     cursor: pointer;
     background-image: url(check.svg);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 100px;
-    margin-top: 2%;
-    display: flex;
     padding: .5% 5%;
     font-size: 20px;
-    color: #888;
 }
-.listto li.checked{
+.todo__list li input:checked + label{
     cursor: pointer;
     background-image: url(check1.svg);
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 100px;
-    margin-top: 2%;
-    display: flex;
-    padding: .5% 5%;
     font-size: 20px;
-    color: #888;
     text-decoration: line-through;
+}
+.todo__list li button{
+    background-image: url(close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0,0,0,0);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 3%;
+    margin-top: 2%;
+    border: none;
+    cursor: pointer;
 }
