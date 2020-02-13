@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 微軟正黑體;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffe;
+}
+
+.todo{
+    margin: 0 auto;
+}
+
+.todo__title{
+    text-align: center;
+    color: #3E8BFF;
+    font-size: 100px;
+    margin-bottom: 5vh;
+    padding-top: 1vh;
+}
+.todo__input{
+    border: #eee solid 1px;
+    border-radius: 50px;
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 2.5vh 5vw;
+}
+.todo__input::placeholder{
+    color: #ccc;
+    font-size: 25px;
+}
+.todo__input:focus{
+    outline: none;
+}
+.todo__list{
+    list-style: none;
+    line-height: 3;
+}
+.todo__list li{
+    margin-top: 1vh;
+    margin-left: 12vw;
+}
+.todo__list li input{
+    display: none;
+}
+.todo__list li input + label{
+    cursor: pointer;
+    background-image: url(check.svg);
+    background-repeat: no-repeat;
+    padding: 1vh 5vw;
+    font-size: 20px;
+}
+.todo__list li input:checked + label{
+    cursor: pointer;
+    background-image: url(check1.svg);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    padding: 1vh 5vw;
+    text-decoration: line-through;
+}
+.todo__list li button{
+    background-image: url(close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0,0,0,0);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 12vw;
+    margin-top: 3vh;
+    border: none;
+    cursor: pointer;
+}
